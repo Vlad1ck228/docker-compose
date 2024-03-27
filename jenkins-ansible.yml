@@ -8,6 +8,7 @@ services:
       - "50000:50000"
     volumes:
       - /home/ubuntu/jenkins_home:/var/jenkins_home
+    restart: always
 
   ansible:
     image: python:3
@@ -15,3 +16,4 @@ services:
     volumes:
       - /home/ubuntu/ansible_playbooks:/ansible/playbooks
       - /home/ubuntu/ansible_inventory:/etc/ansible/hosts
+    restart: always
